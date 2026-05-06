@@ -11,13 +11,11 @@
     },
     {
       "name": "Gear_#2_Teeth",
-      "ioValue": 15,
-      "currentEquation": "15"
+      "ioValue": 15
     },
     {
       "name": "Pitch",
-      "ioValue": 4,
-      "currentEquation": "4"
+      "ioValue": 4
     }
   ],
   "topLevel": true,
@@ -36,8 +34,8 @@
     },
     {
       "atomType": "Code",
-      "x": 0.4059674502712477,
-      "y": 0.32869080779944293,
+      "x": 0.4100529100529101,
+      "y": 0.34818941504178275,
       "uniqueID": "id-7776",
       "ioValues": [
         {
@@ -54,8 +52,8 @@
         }
       ],
       "interpreterVersion": 1,
-      "code": "function run(teeth1: number, teeth2: number, pitch: number, internal: boolean = false) {\n  // External mesh: centers separated by (D1 + D2)/2\n  // Internal mesh (ring + pinion): centers separated by (D_ring − D_pinion)/2\n  const sign = internal ? -1 : 1;\n  return ((teeth1 + sign * teeth2) * pitch) / (2 * Math.PI);\n}",
-      "compiledCode": "\"use strict\";\nfunction run(teeth1, teeth2, pitch, internal = false) {\n    // External mesh: centers separated by (D1 + D2)/2\n    // Internal mesh (ring + pinion): centers separated by (D_ring − D_pinion)/2\n    const sign = internal ? -1 : 1;\n    return ((teeth1 + sign * teeth2) * pitch) / (2 * Math.PI);\n}\n"
+      "code": "function run(teeth1: number, teeth2: number, pitch: number, internal: boolean = true) {\n  // External mesh: centers separated by (D1 + D2)/2\n  // Internal mesh (ring + pinion): centers separated by (D_ring − D_pinion)/2\n  const sign = internal ? -1 : 1;\n  return ((teeth1 + sign * teeth2) * pitch) / (2 * Math.PI);\n}",
+      "compiledCode": "\"use strict\";\nfunction run(teeth1, teeth2, pitch, internal = true) {\n    // External mesh: centers separated by (D1 + D2)/2\n    // Internal mesh (ring + pinion): centers separated by (D_ring − D_pinion)/2\n    const sign = internal ? -1 : 1;\n    return ((teeth1 + sign * teeth2) * pitch) / (2 * Math.PI);\n}\n"
     },
     {
       "atomType": "Input",
